@@ -2,16 +2,152 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Viacheslav Kruglov – CV</title>
+  <style>
+    :root {
+      --fg: #111;
+      --muted: #555;
+      --bg: #f7f7f7;
+      --card: #ffffff;
+      --border: #e5e5e5;
+      --link: #0b57d0;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.5;
+    }
+
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.8rem, 5vw, 2.4rem);
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .section-title {
+      margin: 24px 0 12px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .links {
+      display: grid;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .link-btn {
+      display: block;
+      width: 100%;
+      text-decoration: none;
+      color: var(--fg);
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+
+    .link-btn:active {
+      transform: scale(0.99);
+    }
+
+    .link-btn small {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-weight: 400;
+      font-size: 0.92rem;
+    }
+
+    .footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    a.inline {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    @media (min-width: 640px) {
+      .wrap {
+        padding-top: 40px;
+      }
+
+      .card {
+        padding: 32px 28px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Viacheslav Kruglov</h1>
-  <p>C++ / Python / Scientific Computing / Linux</p>
-  <ul>
-    <li><a href="cv_de.pdf">German CV</a></li>
-    <li><a href="cv_en.pdf">English CV</a></li>
-    <li><a href="https://www.linkedin.com/in/viacheslav-kruglov-009667109">LinkedIn</a></li>
-    <li><a href="https://github.com/chaotic-coconut">GitHub</a></li>
-  </ul>
+  <main class="wrap">
+    <section class="card">
+      <h1>Viacheslav Kruglov</h1>
+      <p class="subtitle">C++ · Python · Scientific Computing · Linux</p>
+
+      <div class="section-title">CV</div>
+      <div class="links">
+        <a class="link-btn" href="cv-de.pdf">
+          German CV
+          <small>Deutsch</small>
+        </a>
+        <a class="link-btn" href="cv-en.pdf">
+          English CV
+          <small>English</small>
+        </a>
+      </div>
+
+      <div class="section-title">Profiles</div>
+      <div class="links">
+        <a class="link-btn" href="https://www.linkedin.com/in/viacheslav-kruglov-009667109">
+          LinkedIn
+          <small>Professional profile</small>
+        </a>
+        <a class="link-btn" href="https://github.com/chaotic-coconut">
+          GitHub
+          <small>Code and projects</small>
+        </a>
+      </div>
+
+      <p class="footer">
+        Based in Oldenburg, Germany
+      </p>
+    </section>
+  </main>
 </body>
 </html>
